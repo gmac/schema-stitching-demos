@@ -1,0 +1,26 @@
+{
+  "name": "combining-local-and-remote-schemas",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start-products": "nodemon --watch services/products services/products/index.js",
+    "start-gateway": "nodemon index.js",
+    "start": "concurrently \"yarn:start-*\""
+  },
+  "dependencies": {
+    "@graphql-tools/links": "^7.1.0",
+    "@graphql-tools/schema": "^7.0.0",
+    "@graphql-tools/stitch": "^7.0.4",
+    "@graphql-tools/wrap": "^7.0.1",
+    "apollo-server-express": "^2.25.0",
+    "concurrently": "^5.3.0",
+    "cross-fetch": "^3.0.6",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0",
+    "graphql-upload": "^12.0.0",
+    "nodemon": "^2.0.6",
+    "wait-on": "^5.2.1"
+  }
+}
